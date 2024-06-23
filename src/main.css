@@ -1,0 +1,45 @@
+/* Format
+    - Position / Position Format (Top = right - bot - left)
+    - z index
+    - Displat / Display Format
+    - gap/padding/marging
+    - aligments
+    - size
+    - font
+    - extras
+*/
+
+/* Font */
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* CSS */
+@import "./component/app/media.css";
+@import "./component/nav/nav.css";
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /* Fonts */
+    --primary-font: "Lora", serif;
+    --secondary-font: "Raleway", sans-serif;
+
+    /* Colors */
+    --primary-color: #ede3d5;
+    --secondary-color: #1c1f25;
+    --accent-color: #c79b74;
+
+    /* padding */
+    --padding-very-small: clamp(0.5rem, max(1rem, 2vmax), max(2rem, 3vmax));
+    --padding-small: clamp(1rem, max(2rem, 3vmax), max(4rem, 5vmax));
+    --padding-med: clamp(2rem, max(3rem, 4vmax), max(5rem, 6vmax));
+    --padding-large: clamp(4rem, max(6rem, 7vmax), max(8rem, 9vmax));
+
+    /* Font Size */
+    --font-very-small: clamp(0.5rem, max(1rem, 1.25vmax), max(2rem, 2.25vmax));
+    --font-small: clamp(1rem, max(1.25rem, 1.5vmax), max(2.25rem, 2.5vmax));
+}
+
