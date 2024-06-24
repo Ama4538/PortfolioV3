@@ -4,7 +4,7 @@
     top: 0;
     display: flex;
     z-index: 100;
-    padding: var(--padding-small) var(--padding-large);
+    padding: var(--padding-small) var(--padding-large) calc(var(--padding-small) / 2);
     justify-content: space-between;
     font-family: var(--secondary-font);
     font-size: calc(var(--font-small) * 1.25);
