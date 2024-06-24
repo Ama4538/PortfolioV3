@@ -10,8 +10,7 @@ function Header() {
     const headerRowAnimation = {
         animate: {
             transition: {
-                delayChildren: 0.4,
-                staggerChildren: 0.1,
+                staggerChildren: 0.075,
             }
         }
     }
@@ -57,7 +56,7 @@ function Header() {
                     }}
                     transition={{
                         duration: 1,
-                        delay: 1.85,
+                        delay: 1.55,
                         ease: "easeInOut"
                     }}
                 >
