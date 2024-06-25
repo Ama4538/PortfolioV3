@@ -18,6 +18,7 @@
 
 @import "./component/app/media.css";
 @import "./component/nav/nav.css";
+@import "./component/header/header.css";
 @import "./component/marquee/marquee.css";
 
 * {
@@ -34,52 +35,63 @@
     /* Colors */
     --primary-color: #ede3d5;
     --secondary-color: #1c1f25;
-    --accent-color: #c79b74;
+    --accent-color: #bbbd9a;
 
     /* padding */
     --padding-very-small: clamp(0.5rem, max(1rem, 2vmax), max(2rem, 3vmax));
     --padding-small: clamp(1rem, max(2rem, 3vmax), max(4rem, 5vmax));
-    --padding-med: clamp(2rem, max(3rem, 4vmax), max(5rem, 6vmax));
+    --padding-med: clamp(2rem, max(3rem, 4.5vmax), max(5rem, 6vmax));
     --padding-large: clamp(4rem, max(6rem, 7.5vmax), max(8rem, 9.5vmax));
 
     /* Font Size */
     --font-very-small: clamp(0.5rem, max(1rem, 1.25vmax), max(2rem, 2.25vmax));
     --font-small: clamp(1rem, max(1.25rem, 1.25vmax), max(2.25rem, 2.25vmax));
-    --font-very-large: clamp(11rem, max(12.25rem, 14.25vmax), max(13rem, 15vmax));
+    --font-med: clamp(1.25rem, max(1.5rem, 1.75vmax), max(2.5rem, 2.75vmax));
+    --font-very-large: clamp(11rem, max(12.25rem, 14.5vmax), max(13rem, 15.25vmax));
 }
 
-body {
+/* Scorll Bar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
     background-color: var(--primary-color);
 }
 
-.header {
-    padding: 0 var(--padding-very-small);
+/* Project */
+
+.projects {
+    padding-top: var(--padding-very-small);
+    margin-top: calc(var(--padding-med) - calc(var(--padding-very-small) / 1.25));
+    align-self: center;
+    min-height: 100dvh;
+    width: 75%;
+    background-color: var(--accent-color);
+    transition: 0.45s ease-in-out;
+}
+
+.projects[data-inview=true] {
+    width: 100%;
+}
+
+.projects__header-title {
     font-family: var(--primary-font);
-    color: var(--secondary-color);
-    cursor: default;
+    font-size: var(--font-med);
+    text-align: center;
     text-transform: uppercase;
-}
-
-.header__row {
-    display: flex;
-    overflow: hidden;
-}
-
-.header-row__title {
-    font-size: var(--font-very-large);
-    font-weight: 500;
-}
-
-.header-row__message {
-    display: flex;
-    flex-direction: column;
-    flex: 1;
-    gap: calc(var(--padding-very-small) / 3);
-    padding: var(--padding-med) var(--padding-small) 0;
-    align-items: end;
-    justify-content: center;
-    font-family: var(--secondary-font);
-    font-size: calc(var(--font-small) * 1.15);
-    font-weight: 600;
-    text-transform: none;
 }

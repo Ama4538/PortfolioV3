@@ -1,0 +1,31 @@
+.header {
+    padding: 0 var(--padding-very-small);
+    font-family: var(--primary-font);
+    color: var(--secondary-color);
+    cursor: default;
+    text-transform: uppercase;
+}
+
+.header__row {
+    display: flex;
+    overflow: hidden;
+}
+
+.header-row__title {
+    font-size: var(--font-very-large);
+    font-weight: 500;
+}
+
+.header-row__message {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    gap: calc(var(--padding-very-small) / 3);
+    padding: var(--padding-med) var(--padding-small) 0;
+    align-items: end;
+    justify-content: center;
+    font-family: var(--secondary-font);
+    font-size: calc(var(--font-small) * 1.15);
+    font-weight: 600;
+    text-transform: none;
+}

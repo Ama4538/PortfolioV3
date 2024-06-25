@@ -34,7 +34,7 @@
 }
 
 .nav__title {
-    font-size: calc(var(--font-small) * 1.25);
+    font-size: var(--font-med);
 }
 
 .nav__button-container {
