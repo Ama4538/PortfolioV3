@@ -10,9 +10,12 @@
 */
 
 /* Font */
-@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
 /* CSS */
+
 @import "./component/app/media.css";
 @import "./component/nav/nav.css";
 @import "./component/marquee/marquee.css";
@@ -25,7 +28,7 @@
 
 :root {
     /* Fonts */
-    --primary-font: "Lora", serif;
+    --primary-font: "Playfair Display", serif;
     --secondary-font: "Raleway", sans-serif;
 
     /* Colors */
@@ -42,13 +45,19 @@
     /* Font Size */
     --font-very-small: clamp(0.5rem, max(1rem, 1.25vmax), max(2rem, 2.25vmax));
     --font-small: clamp(1rem, max(1.25rem, 1.25vmax), max(2.25rem, 2.25vmax));
-    --font-very-large: clamp(11rem, max(12rem, 14vmax), max(13rem, 15vmax));
+    --font-very-large: clamp(11rem, max(12.25rem, 14.25vmax), max(13rem, 15vmax));
+}
+
+body {
+    background-color: var(--primary-color);
 }
 
 .header {
     padding: 0 var(--padding-very-small);
     font-family: var(--primary-font);
+    color: var(--secondary-color);
     cursor: default;
+    text-transform: uppercase;
 }
 
 .header__row {
@@ -58,7 +67,7 @@
 
 .header-row__title {
     font-size: var(--font-very-large);
-    font-weight: 400;
+    font-weight: 500;
 }
 
 .header-row__message {
@@ -66,10 +75,11 @@
     flex-direction: column;
     flex: 1;
     gap: calc(var(--padding-very-small) / 3);
-    padding: var(--padding-med) var(--padding-large) 0;
+    padding: var(--padding-med) var(--padding-small) 0;
     align-items: end;
     justify-content: center;
     font-family: var(--secondary-font);
     font-size: calc(var(--font-small) * 1.15);
     font-weight: 600;
+    text-transform: none;
 }

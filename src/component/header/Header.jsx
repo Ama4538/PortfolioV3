@@ -64,7 +64,7 @@ function Header() {
                     - Jake the Dog
                 </motion.p>
             </motion.div>
-            <Marquee text={"Driven by Curiosity and Innovation, Transforming Ideas into Reality"} />
+            <Marquee text={"Driven by Curiosity and Innovation, Transforming Ideas into Reality."} />
         </header>
     )
 }

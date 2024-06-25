@@ -10,8 +10,8 @@
     gap: var(--padding-med);
     justify-content: space-around;
     width: max-content;
-    font-size: calc(var(--font-very-large) / 1.10);
-    font-weight: 400;
+    font-size: calc(var(--font-very-large) / 1.30);
+    font-weight: 500;
     list-style: none;
 }
 

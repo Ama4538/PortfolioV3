@@ -6,12 +6,12 @@ function Nav() {
     const [menuStatus, setMenuStatus] = useState(false)
 
     return (
-        <motion.nav 
+        <motion.nav
             className="nav"
-            initial = {{
+            initial={{
                 y: -400,
             }}
-            animate = {{
+            animate={{
                 y: 0,
             }}
             transition={{
@@ -20,7 +20,10 @@ function Nav() {
                 ease: [0.6, 0.01, -0.05, 0.95]
             }}
         >
-            <h3 className="nav__title"> Kevin </h3>
+            <a
+                href=""
+                className="nav__title nav__link"
+            > Kevin </a>
             <ul
                 className="nav__menu-container"
                 data-menu={menuStatus}
