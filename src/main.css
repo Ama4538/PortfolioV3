@@ -13,13 +13,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
 /* CSS */
-
 @import "./component/app/media.css";
 @import "./component/nav/nav.css";
 @import "./component/header/header.css";
 @import "./component/marquee/marquee.css";
+@import "./component/projectcontent/projectcontent.css";
 
 * {
     padding: 0;
@@ -36,6 +35,7 @@
     --primary-color: #ede3d5;
     --secondary-color: #1c1f25;
     --accent-color: #bbbd9a;
+    --shadow-color: #33353b;
 
     /* padding */
     --padding-very-small: clamp(0.5rem, max(1rem, 2vmax), max(2rem, 3vmax));
@@ -47,6 +47,7 @@
     --font-very-small: clamp(0.5rem, max(1rem, 1.25vmax), max(2rem, 2.25vmax));
     --font-small: clamp(1rem, max(1.25rem, 1.25vmax), max(2.25rem, 2.25vmax));
     --font-med: clamp(1.25rem, max(1.5rem, 1.75vmax), max(2.5rem, 2.75vmax));
+    --font-large: clamp(5rem, max(6rem, 7vmax), max(7rem, 8vmax));
     --font-very-large: clamp(11rem, max(12.25rem, 14.5vmax), max(13rem, 15.25vmax));
 }
 
@@ -60,13 +61,14 @@
 }
 
 ::-webkit-scrollbar-thumb {
-    background: #888;
+    background: #606266;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: #555;
+    background: #33353b;
 }
 
+/* main */
 .main {
     display: flex;
     flex-direction: column;
@@ -76,13 +78,15 @@
 /* Project */
 
 .projects {
-    padding-top: var(--padding-very-small);
-    margin-top: calc(var(--padding-med) - calc(var(--padding-very-small) / 1.25));
+    display: flex;
+    flex-direction: column;
+    padding: 0 var(--padding-large) calc((var(--padding-very-small) * 2) + var(--font-med));
+    margin-top: calc((var(--padding-very-small) * -2) - var(--font-med));
     align-self: center;
-    min-height: 100dvh;
+    min-height: 300dvh;
     width: 75%;
     background-color: var(--accent-color);
-    transition: 0.45s ease-in-out;
+    transition: 0.5s ease-in-out;
 }
 
 .projects[data-inview=true] {
@@ -90,8 +94,11 @@
 }
 
 .projects__header-title {
+    padding: var(--padding-very-small);
     font-family: var(--primary-font);
     font-size: var(--font-med);
     text-align: center;
     text-transform: uppercase;
 }
+
+

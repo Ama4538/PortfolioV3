@@ -1,5 +1,6 @@
 .header {
     padding: 0 var(--padding-very-small);
+    min-height: calc(100dvh - var(--padding-small) - calc(var(--font-med) * 1.20));
     font-family: var(--primary-font);
     color: var(--secondary-color);
     cursor: default;

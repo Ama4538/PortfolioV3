@@ -1,0 +1,42 @@
+[
+        {
+            "name": "Petal Vogue",
+            "description": "A fast fashion e-commerce platform where each product has a unique page with specific coloring and sizing. Key features include a sorting system, search functionality, wishlist management, and a user-friendly cart system. Product details can be edited directly from the wishlist or cart. The platform also features a recommendation system that suggests products based on user preferences. It is fully responsive and maintains data between refreshes using local storage.",
+            "category" : "E-Commerce",
+            "image": "petal-vogue.png",
+            "liveLink" : "https://e-commerce-kevin-lys-projects.vercel.app",
+            "codeLink" :  "https://github.com/Ama4538/Shopping-Cart"
+        },
+        {
+            "name": "Weather App",
+            "description": "Weather App containing a searchable zipcode for a location's weather displaying a 24 hour weather forecast and 3 day forecast from a free weather API.",
+            "tags": ["HTML", "CSS", "JavaScript"],
+            "image": "WeatherApp.png",
+            "liveLink" : "https://ama4538.github.io/Weather-App/",
+            "codeLink" :  "https://github.com/Ama4538/Weather-App"
+        },
+        {
+            "name": "Calculator",
+            "description": "Simple Calculator able to clear, change sign, percent, and simple operation.",
+            "tags": ["HTML", "CSS", "JavaScript"],
+            "image": "Calculator.png",
+            "liveLink" : "https://ama4538.github.io/Calculator",
+            "codeLink" :  "https://github.com/Ama4538/Calculator"
+        },
+        {
+            "name": "Etch A Sketch",
+            "description": "A recreation of a Etch-A-Sketch on a web page able to change size of grid, draw, erase, and clear the grid.",
+            "tags": ["HTML", "CSS", "JavaScript"],
+            "image": "Etch-A-Sketch.png",
+            "liveLink" : "https://ama4538.github.io/Etch-A-Sketch/",
+            "codeLink" :  "https://github.com/Ama4538/Etch-A-Sketch"
+        },
+        {
+            "name": "Image slider",
+            "description": "Simple image-slider mini project implementing a slider alongside a shift of each image following the cursor and a hover effect.",
+            "tags": ["HTML", "CSS", "JavaScript"],
+            "image": "Image-slider.png",
+            "liveLink" : "https://ama4538.github.io/Image-Slider/",
+            "codeLink" :  "https://github.com/Ama4538/Image-Slider"
+        }
+]
