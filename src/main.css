@@ -104,6 +104,12 @@
     text-transform: uppercase;
 }
 
+.projects__container {
+    display: flex;
+    flex-direction: column;
+    gap: var(--padding-med);
+}
+
 /* Pseudo element */
 .projects__header-title::before,
 .projects__header-title::after {

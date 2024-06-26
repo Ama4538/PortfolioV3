@@ -7,20 +7,36 @@
     color: var(--secondary-color);
 }
 
+.projectcontent[data-flip=true] {
+    grid-template-columns: 0.325fr 1fr;
+}
+
 .projectcontent__title {
     margin-top: calc(var(--padding-very-small) * -1);
     padding: 0 0 calc(var(--padding-very-small) / 2);
-    margin-right: var(--padding-very-small);
+    margin-right: calc(var(--padding-very-small) / 1.5);
     font-size: var(--font-large);
     font-weight: 400;
     text-align: center;
+}
+
+.projectcontent[data-flip=true] .projectcontent__title {
+    grid-column: 2;
+    margin-left: calc(var(--padding-very-small) / 1.5);
+    margin-right: 0;
 }
 
 .projectcontent__image-container {
     position: relative;
     grid-column: 1;
     grid-row: 2;
-    margin-right: calc(var(--padding-very-small));
+    margin-right: calc(var(--padding-very-small) / 1.5);
+}
+
+.projectcontent[data-flip=true] .projectcontent__image-container {
+    grid-column: 2;
+    margin-left: calc(var(--padding-very-small) / 1.5);
+    margin-right: 0;
 }
 
 .projectcontent__image {
@@ -36,13 +52,21 @@
     flex-direction: column;
     grid-column: 2;
     grid-row: 1 / end;
-    padding-left: calc(var(--padding-very-small));
+    padding-left: calc(var(--padding-very-small) / 1.5);
+}
+
+.projectcontent[data-flip=true] .projectcontent__right-column {
+    grid-column: 1;
+    grid-row: 1 / end;
+    padding-left: 0;
+    padding-right: calc(var(--padding-very-small) / 1.5);
 }
 
 .projectcontent__description-title {
     font-family: var(--primary-font);
-    padding-bottom: calc(var(--padding-very-small) / 2);
-    font-size: calc(var(--font-med) * 1.5);
+    margin-bottom: calc(var(--padding-very-small) / 5);
+    margin-top: calc(var(--padding-very-small) / -2);
+    font-size: calc(var(--font-med) * 1.8);
 }
 
 .projectcontent__description {
@@ -50,13 +74,35 @@
     font-size: var(--font-very-small);
     font-weight: 500;
     text-indent: 2rem;
+    overflow: auto;
+}
+
+.projectcontent__tag-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: calc(var(--padding-very-small) / 3);
+    ;
+    margin-top: auto;
+    list-style: none;
+}
+
+.projectcontent[data-flip=true] .projectcontent__tag-container {
+    justify-content: end;
+}
+
+.projectcontent__tag {
+    padding: calc(var(--padding-very-small) / 12) calc(var(--padding-very-small) / 3);
+    font-family: var(--secondary-font);
+    font-size: calc(var(--font-very-small) / 1.25);
+    font-weight: 500;
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    user-select: none;
 }
 
 .projectcontent__link-container {
     display: flex;
     flex-direction: column;
-    margin-top: auto;
-    justify-content: center;
     list-style: none;
 }
 
@@ -68,7 +114,7 @@
     position: relative;
     z-index: 1;
     padding: calc(var(--padding-very-small) / 3) 0;
-    margin-top: calc(var(--padding-very-small) / 2);
+    margin-top: calc(var(--padding-very-small) / 3);
     width: 100%;
     font-family: var(--secondary-font);
     font-size: calc(var(--font-very-small) * 1.25);
@@ -79,7 +125,8 @@
     cursor: pointer;
     text-align: center;
     text-decoration: none;
-    transition: 0.30s ease-out;	
+    transition: 0.30s ease-out;
+    user-select: none;
 }
 
 /* Pseudo element */
@@ -99,12 +146,19 @@
 .projectcontent__right-column::before {
     position: absolute;
     top: 0;
-    left: 0;
     height: 0;
-    width: 5%;
+    width: 1px;
     border-left: solid 1px var(--shadow-color);
     content: "";
     transition: 0.5s ease-out;
+}
+
+.projectcontent[data-flip=false] .projectcontent__right-column::before {
+    left: 0;
+}
+
+.projectcontent[data-flip=true] .projectcontent__right-column::before {
+    right: 0;
 }
 
 .projectcontent__link::before {
@@ -116,7 +170,7 @@
     width: 100%;
     background-color: var(--secondary-color);
     content: "";
-    transition: 0.275s ease-out;	
+    transition: 0.275s ease-out;
 }
 
 /* Animation */
@@ -128,6 +182,6 @@
     height: 100%;
 }
 
-.projectcontent__right-column[data-border="true"]::before{
+.projectcontent__right-column[data-border="true"]::before {
     height: 100%;
 }

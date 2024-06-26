@@ -2,39 +2,44 @@
         {
             "name": "Petal Vogue",
             "description": "A fast fashion e-commerce platform where each product has a unique page with specific coloring and sizing. Key features include a sorting system, search functionality, wishlist management, and a user-friendly cart system. Product details can be edited directly from the wishlist or cart. The platform also features a recommendation system that suggests products based on user preferences. It is fully responsive and maintains data between refreshes using local storage.",
-            "category" : "E-Commerce",
+            "category" : "Commerce",
+            "tags": ["React", "CSS"],
             "image": "petal-vogue.png",
             "liveLink" : "https://petal-vogue.vercel.app",
             "codeLink" :  "https://github.com/Ama4538/Petal-Vogue"
         },
         {
             "name": "Weather App",
-            "description": "Weather App containing a searchable zipcode for a location's weather displaying a 24 hour weather forecast and 3 day forecast from a free weather API.",
+            "description": "A weather app providing a 24-hour and 3-day forecast using a free weather API. Key features include current weather conditions, zipcode search functionality, and real-time updates. The app offers a user-friendly interface with detailed weather information, ensuring users stay informed about upcoming weather changes.",
             "category" : "Weather",
+            "tags": ["HTML", "CSS", "JavaScript"],
             "image": "weather-app.png",
             "liveLink" : "https://ama4538.github.io/Weather-App/",
             "codeLink" :  "https://github.com/Ama4538/Weather-App"
         },
         {
             "name": "Calculator",
-            "description": "Simple Calculator able to clear, change sign, percent, and simple operation.",
+            "description": "A simple calculator for performing mathematical calculations. Key features include clear functionality, changing negative to positive, percentage calculations, and basic arithmetic operations.",
             "category" : "Utility",
+            "tags": ["HTML", "CSS", "JavaScript"],
             "image": "calculator.png",
             "liveLink" : "https://ama4538.github.io/Calculator",
             "codeLink" :  "https://github.com/Ama4538/Calculator"
         },
         {
             "name": "Etch A Sketch",
-            "description": "A recreation of a Etch-A-Sketch on a web page able to change size of grid, draw, erase, and clear the grid.",
+            "description": "A virtual Etch A Sketch simulating the classic experience on a web page. Key features include changing grid size, drawing, erasing, and clearing the screen.",
             "category" : "Game",
+            "tags": ["HTML", "CSS", "JavaScript"],
             "image": "etch-a-sketch.png",
             "liveLink" : "https://ama4538.github.io/Etch-A-Sketch/",
             "codeLink" :  "https://github.com/Ama4538/Etch-A-Sketch"
         },
         {
             "name": "Image slider",
-            "description": "Simple image-slider mini project implementing a slider alongside a shift of each image following the cursor and a hover effect.",
+            "description": "A simple image slider for displaying a series of images with animation and transition effects. Key features include image shifting following the cursor, hover effects, and smooth transitions.",
             "category" : "Presentation",
+            "tags": ["HTML", "CSS", "JavaScript"],
             "image": "image-slider.png",
             "liveLink" : "https://ama4538.github.io/Image-Slider/",
             "codeLink" :  "https://github.com/Ama4538/Image-Slider"

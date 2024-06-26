@@ -2,16 +2,16 @@ import { useInView } from 'react-intersection-observer';
 import { motion, useAnimation } from "framer-motion";
 import { useEffect, useState } from 'react';
 
-function ProjectContent({ project }) {
+function ProjectContent({ project, flipped }) {
     // State used to determine if the animation is complete to show border
     const [showBorder, setShowBorder] = useState(false)
-    
+
     // Animation controller
     const controller = useAnimation();
 
     // Used to see if content is in view
     const { ref, inView } = useInView({
-        threshold: 0.30
+        threshold: 0.10
     })
 
     // play animation when the content is in view
@@ -50,6 +50,7 @@ function ProjectContent({ project }) {
         <article
             className="projectcontent"
             ref={ref}
+            data-flip={flipped}
         >
             <motion.h3
                 className="projectcontent__title"
@@ -57,17 +58,19 @@ function ProjectContent({ project }) {
                 initial="initial"
                 animate={controller}
             >{project.name}</motion.h3>
-            <motion.div 
+            <motion.div
                 className="projectcontent__image-container"
                 variants={{
                     animate: {
-                        height: "100%"
+                        height: "100%",
+                        opacity: 1
                     }
                 }}
-                initial = {{
+                initial={{
                     height: 0,
+                    opacity: 0
                 }}
-                animate = {controller}
+                animate={controller}
                 transition={{
                     duration: 1,
                     delay: 1,
@@ -86,8 +89,8 @@ function ProjectContent({ project }) {
                 variants={rightColumnAnimation}
                 initial="initial"
                 animate={controller}
-                onAnimationComplete={() => {setShowBorder(true)}}
-                data-border = {showBorder}
+                onAnimationComplete={() => { setShowBorder(true) }}
+                data-border={showBorder}
             >
                 <motion.h4
                     className="projectcontent__description-title"
@@ -97,6 +100,20 @@ function ProjectContent({ project }) {
                     className="projectcontent__description"
                     variants={contentAnimation}
                 >{project.description}</motion.p>
+
+                <motion.ul 
+                    className="projectcontent__tag-container"
+                    variants={contentAnimation}
+                >
+                    {project.tags.map(tag => (
+                        <li
+                            className="projectcontent__tag"
+                            key={project.name + project.tag}
+                        >{tag}</li>
+                    ))}
+
+                </motion.ul>
+
                 <ul className="projectcontent__link-container">
                     <li className="projectcontent__link-item">
                         <motion.a

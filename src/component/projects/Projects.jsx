@@ -27,7 +27,13 @@ function Projects() {
             }}
         >
             <h2 className="projects__header-title">Projects</h2>
-            <ProjectContent project={projects[0]} />
+            <div className="projects__container">
+                {projects.map((project, index) => (
+                    // Flip every other product
+                    <ProjectContent project={project} flipped={(index + 1) % 2 === 0}/>
+                ))}
+            </div>
+            
         </motion.section>
     )
 }
