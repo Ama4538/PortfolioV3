@@ -10,7 +10,7 @@
         {
             "name": "Weather App",
             "description": "Weather App containing a searchable zipcode for a location's weather displaying a 24 hour weather forecast and 3 day forecast from a free weather API.",
-            "category" : "E-Commerce",
+            "category" : "Weather",
             "image": "weather-app.png",
             "liveLink" : "https://ama4538.github.io/Weather-App/",
             "codeLink" :  "https://github.com/Ama4538/Weather-App"
@@ -18,7 +18,7 @@
         {
             "name": "Calculator",
             "description": "Simple Calculator able to clear, change sign, percent, and simple operation.",
-            "category" : "E-Commerce",
+            "category" : "Utility",
             "image": "calculator.png",
             "liveLink" : "https://ama4538.github.io/Calculator",
             "codeLink" :  "https://github.com/Ama4538/Calculator"
@@ -26,7 +26,7 @@
         {
             "name": "Etch A Sketch",
             "description": "A recreation of a Etch-A-Sketch on a web page able to change size of grid, draw, erase, and clear the grid.",
-            "category" : "E-Commerce",
+            "category" : "Game",
             "image": "etch-a-sketch.png",
             "liveLink" : "https://ama4538.github.io/Etch-A-Sketch/",
             "codeLink" :  "https://github.com/Ama4538/Etch-A-Sketch"
@@ -34,7 +34,7 @@
         {
             "name": "Image slider",
             "description": "Simple image-slider mini project implementing a slider alongside a shift of each image following the cursor and a hover effect.",
-            "category" : "E-Commerce",
+            "category" : "Presentation",
             "image": "image-slider.png",
             "liveLink" : "https://ama4538.github.io/Image-Slider/",
             "codeLink" :  "https://github.com/Ama4538/Image-Slider"

@@ -31,12 +31,12 @@
 
 /* right Column */
 .projectcontent__right-column {
+    position: relative;
     display: flex;
     flex-direction: column;
     grid-column: 2;
     grid-row: 1 / end;
     padding-left: calc(var(--padding-very-small));
-    border-left: solid 1px var(--shadow-color);
 }
 
 .projectcontent__description-title {
@@ -96,6 +96,17 @@
     content: "";
 }
 
+.projectcontent__right-column::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 0;
+    width: 5%;
+    border-left: solid 1px var(--shadow-color);
+    content: "";
+    transition: 0.5s ease-out;
+}
+
 .projectcontent__link::before {
     position: absolute;
     z-index: -2;
@@ -114,5 +125,9 @@
 }
 
 .projectcontent__link:hover::before {
+    height: 100%;
+}
+
+.projectcontent__right-column[data-border="true"]::before{
     height: 100%;
 }

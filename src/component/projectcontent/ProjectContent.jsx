@@ -1,37 +1,121 @@
-
+import { useInView } from 'react-intersection-observer';
+import { motion, useAnimation } from "framer-motion";
+import { useEffect, useState } from 'react';
 
 function ProjectContent({ project }) {
+    // State used to determine if the animation is complete to show border
+    const [showBorder, setShowBorder] = useState(false)
+    
+    // Animation controller
+    const controller = useAnimation();
+
+    // Used to see if content is in view
+    const { ref, inView } = useInView({
+        threshold: 0.30
+    })
+
+    // play animation when the content is in view
+    useEffect(() => {
+        if (inView) {
+            controller.start("animate")
+        }
+
+    }, [inView])
+
+    // Animations
+    const contentAnimation = {
+        initial: {
+            y: 200,
+            filter: "blur(200px)",
+        },
+        animate: {
+            y: 0,
+            filter: "blur(0)",
+            transition: {
+                duration: 1,
+                ease: [0.6, 0.01, 0.40, 0.95]
+            }
+        }
+    }
+
+    const rightColumnAnimation = {
+        animate: {
+            transition: {
+                staggerChildren: 0.20,
+            }
+        },
+    }
+
     return (
-        <article className="projectcontent" >
-            <h3 className="projectcontent__title">{project.name}</h3>
-            <div className="projectcontent__image-container">
+        <article
+            className="projectcontent"
+            ref={ref}
+        >
+            <motion.h3
+                className="projectcontent__title"
+                variants={contentAnimation}
+                initial="initial"
+                animate={controller}
+            >{project.name}</motion.h3>
+            <motion.div 
+                className="projectcontent__image-container"
+                variants={{
+                    animate: {
+                        height: "100%"
+                    }
+                }}
+                initial = {{
+                    height: 0,
+                }}
+                animate = {controller}
+                transition={{
+                    duration: 1,
+                    delay: 1,
+                    ease: [0.6, 0.01, 0.40, 0.95]
+                }}
+            >
                 <img
                     className="projectcontent__image"
                     src={`./project-images/${project.image}`}
                     alt={`image screenshot of ${project.name}`}
                 />
-            </div>
+            </motion.div>
 
-            <div className="projectcontent__right-column">
-                <h4 className="projectcontent__description-title">{project.category}</h4>
-                <p className="projectcontent__description">{project.description}</p>
+            <motion.div
+                className="projectcontent__right-column"
+                variants={rightColumnAnimation}
+                initial="initial"
+                animate={controller}
+                onAnimationComplete={() => {setShowBorder(true)}}
+                data-border = {showBorder}
+            >
+                <motion.h4
+                    className="projectcontent__description-title"
+                    variants={contentAnimation}
+                >{project.category}</motion.h4>
+                <motion.p
+                    className="projectcontent__description"
+                    variants={contentAnimation}
+                >{project.description}</motion.p>
                 <ul className="projectcontent__link-container">
                     <li className="projectcontent__link-item">
-                        <a
+                        <motion.a
                             className="projectcontent__link"
                             href={project.liveLink}
                             target="__blank"
-                        > See It Live</a>
+                            variants={contentAnimation}
+                        > See It Live</motion.a>
                     </li>
                     <li className="projectcontent__link-item">
-                        <a
+                        <motion.a
                             className="projectcontent__link"
                             href={project.liveLink}
                             target="__blank"
-                        > View The Code</a>
+                            variants={contentAnimation}
+                        > View The Code</motion.a>
                     </li>
                 </ul>
-            </div>
+            </motion.div>
 
         </article>
     )
