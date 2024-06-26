@@ -1,5 +1,4 @@
-import { motion, useScroll, useTransform } from "framer-motion";
-import { useEffect, useRef, useState } from "react";
+
 
 function ProjectContent({ project }) {
     return (
@@ -15,10 +14,22 @@ function ProjectContent({ project }) {
 
             <div className="projectcontent__right-column">
                 <h4 className="projectcontent__description-title">{project.category}</h4>
-                    <p className="projectcontent__description">{project.description}</p>
-                <ul className="projectcontent__button-container">
-                    <li><button className="projectcontent__button"> See It Live</button></li>
-                    <li><button className="projectcontent__button"> View The Code</button></li>
+                <p className="projectcontent__description">{project.description}</p>
+                <ul className="projectcontent__link-container">
+                    <li className="projectcontent__link-item">
+                        <a
+                            className="projectcontent__link"
+                            href={project.liveLink}
+                            target="__blank"
+                        > See It Live</a>
+                    </li>
+                    <li className="projectcontent__link-item">
+                        <a
+                            className="projectcontent__link"
+                            href={project.liveLink}
+                            target="__blank"
+                        > View The Code</a>
+                    </li>
                 </ul>
             </div>
 

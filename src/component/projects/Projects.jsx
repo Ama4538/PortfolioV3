@@ -6,7 +6,7 @@ import ProjectContent from '../projectcontent/ProjectContent';
 function Projects() {
     // Used to play animation when in view
     const { ref, inView } = useInView({
-        threshold: 0.15
+        threshold: 0.05
     })
 
     return (
@@ -28,7 +28,6 @@ function Projects() {
         >
             <h2 className="projects__header-title">Projects</h2>
             <ProjectContent project={projects[0]} />
-
         </motion.section>
     )
 }

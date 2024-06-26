@@ -83,6 +83,7 @@
     padding: 0 var(--padding-large) calc((var(--padding-very-small) * 2) + var(--font-med));
     margin-top: calc((var(--padding-very-small) * -2) - var(--font-med));
     align-self: center;
+    align-items: center;
     min-height: 300dvh;
     width: 75%;
     background-color: var(--accent-color);
@@ -94,11 +95,42 @@
 }
 
 .projects__header-title {
-    padding: var(--padding-very-small);
+    width: max-content;
+    position: relative;
+    padding: var(--padding-very-small) 0;
     font-family: var(--primary-font);
     font-size: var(--font-med);
     text-align: center;
     text-transform: uppercase;
 }
 
+/* Pseudo element */
+.projects__header-title::before,
+.projects__header-title::after {
+    position: absolute;
+    bottom: var(--padding-very-small);
+    height: 2px;
+    width: 0%;
+    background-color: var(--secondary-color);
+    content: " ";
+    transition: 0.5s ease-in-out;
+}
 
+.projects__header-title::before {
+    right: 50%
+}
+
+.projects__header-title::after {
+    left: 51%
+}
+
+/* Animation */
+.projects[data-inview=true] .projects__header-title::before{
+    right: 0;
+    width: 50%;
+}
+
+.projects[data-inview=true] .projects__header-title::after{
+    left: 0;
+    width: 51%;
+}
