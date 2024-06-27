@@ -28,7 +28,7 @@
 .projects__container {
     display: flex;
     flex-direction: column;
-    gap: calc(var(--padding-med) / 1.35);
+    gap: calc(var(--padding-med) / 1.5);
 }
 
 /* Pseudo element */

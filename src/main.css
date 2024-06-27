@@ -76,3 +76,23 @@
     background-color: var(--primary-color);
 }
 
+/* About */
+.about {
+    padding: 0 var(--padding-small);
+    width: 97.5%;
+    min-height: 100dvh;
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+}
+
+.about__title {
+    font-family: var(--primary-font);
+    font-size: var(--font-large);
+    border-bottom: solid 1px var(--primary-color);
+}
+
+.about__animation-container {
+    margin-top: var(--padding-very-small);
+    background-color: red;
+    aspect-ratio: 2.75/1;
+}
