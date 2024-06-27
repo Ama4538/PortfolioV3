@@ -1,13 +1,13 @@
-import { useInView } from 'react-intersection-observer';
-import { motion } from "framer-motion";
+import { useRef } from "react";
+import { motion, useInView } from "framer-motion";
 import projects from "../../data.json";
 import ProjectContent from '../projectcontent/ProjectContent';
 
 function Projects() {
+    // Reference to check if in view
+    const ref = useRef(null)
     // Used to play animation when in view
-    const { ref, inView } = useInView({
-        threshold: 0.05
-    })
+    const inView = useInView(ref, {amount: 0.05, once: true })
 
     return (
         <motion.section
@@ -30,7 +30,12 @@ function Projects() {
             <div className="projects__container">
                 {projects.map((project, index) => (
                     // Flip every other product
-                    <ProjectContent project={project} flipped={(index + 1) % 2 === 0}/>
+                    <ProjectContent 
+                    project={project} 
+                    flipped={(index + 1) % 2 === 0} 
+                    borderBottom = {index < (projects.length - 1)}
+                    key={project.name + "main"}
+                    />
                 ))}
             </div>
             

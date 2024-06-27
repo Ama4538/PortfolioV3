@@ -1,3 +1,4 @@
+/* Header */
 .header {
     padding: 0 var(--padding-very-small);
     min-height: calc(100dvh - var(--padding-small) - calc(var(--font-med) * 1.20));
@@ -27,6 +28,6 @@
     justify-content: center;
     font-family: var(--secondary-font);
     font-size: calc(var(--font-small) * 1.15);
-    font-weight: 600;
+    font-weight: 500;
     text-transform: none;
 }

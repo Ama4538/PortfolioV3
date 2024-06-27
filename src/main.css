@@ -19,6 +19,8 @@
 @import "./component/header/header.css";
 @import "./component/marquee/marquee.css";
 @import "./component/projectcontent/projectcontent.css";
+@import "./component/projects/projects.css";
+@import "./component/filler/filler.css";
 
 * {
     padding: 0;
@@ -35,7 +37,6 @@
     --primary-color: #ede3d5;
     --secondary-color: #1c1f25;
     --accent-color: #bbbd9a;
-    --shadow-color: #33353b;
 
     /* padding */
     --padding-very-small: clamp(0.5rem, max(1rem, 2vmax), max(2rem, 3vmax));
@@ -75,68 +76,3 @@
     background-color: var(--primary-color);
 }
 
-/* Project */
-
-.projects {
-    display: flex;
-    flex-direction: column;
-    padding: 0 var(--padding-large) calc((var(--padding-very-small) * 2) + var(--font-med));
-    margin-top: calc((var(--padding-very-small) * -2) - var(--font-med));
-    align-self: center;
-    align-items: center;
-    min-height: 300dvh;
-    width: 75%;
-    background-color: var(--accent-color);
-    transition: 0.5s ease-in-out;
-}
-
-.projects[data-inview=true] {
-    width: 100%;
-}
-
-.projects__header-title {
-    width: max-content;
-    position: relative;
-    padding: var(--padding-very-small) 0;
-    font-family: var(--primary-font);
-    font-size: var(--font-med);
-    text-align: center;
-    text-transform: uppercase;
-}
-
-.projects__container {
-    display: flex;
-    flex-direction: column;
-    gap: var(--padding-med);
-}
-
-/* Pseudo element */
-.projects__header-title::before,
-.projects__header-title::after {
-    position: absolute;
-    bottom: var(--padding-very-small);
-    height: 2px;
-    width: 0%;
-    background-color: var(--secondary-color);
-    content: " ";
-    transition: 0.5s ease-in-out;
-}
-
-.projects__header-title::before {
-    right: 50%
-}
-
-.projects__header-title::after {
-    left: 51%
-}
-
-/* Animation */
-.projects[data-inview=true] .projects__header-title::before{
-    right: 0;
-    width: 50%;
-}
-
-.projects[data-inview=true] .projects__header-title::after{
-    left: 0;
-    width: 51%;
-}

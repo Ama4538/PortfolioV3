@@ -1,28 +1,34 @@
-import { useInView } from 'react-intersection-observer';
-import { motion, useAnimation } from "framer-motion";
-import { useEffect, useState } from 'react';
+import { motion, useAnimation, useInView } from "framer-motion";
+import { useEffect, useState, useRef } from 'react';
 
-function ProjectContent({ project, flipped }) {
+function ProjectContent({ project, flipped, borderBottom}) {
     // State used to determine if the animation is complete to show border
     const [showBorder, setShowBorder] = useState(false)
 
     // Animation controller
     const controller = useAnimation();
 
-    // Used to see if content is in view
-    const { ref, inView } = useInView({
-        threshold: 0.10
-    })
+    // Reference to check if in view
+    const ref = useRef(null)
+    // Used to play animation when in view
+    const inView = useInView(ref, {amount: 0.05})
 
     // play animation when the content is in view
     useEffect(() => {
         if (inView) {
             controller.start("animate")
         }
-
     }, [inView])
 
     // Animations
+    const rightColumnAnimation = {
+        animate: {
+            transition: {
+                staggerChildren: 0.15,
+            }
+        },
+    }
+
     const contentAnimation = {
         initial: {
             y: 200,
@@ -32,18 +38,10 @@ function ProjectContent({ project, flipped }) {
             y: 0,
             filter: "blur(0)",
             transition: {
-                duration: 1,
+                duration: 0.75,
                 ease: [0.6, 0.01, 0.40, 0.95]
             }
         }
-    }
-
-    const rightColumnAnimation = {
-        animate: {
-            transition: {
-                staggerChildren: 0.20,
-            }
-        },
     }
 
     return (
@@ -51,6 +49,8 @@ function ProjectContent({ project, flipped }) {
             className="projectcontent"
             ref={ref}
             data-flip={flipped}
+            data-borderbottom = {borderBottom}
+            data-border={showBorder}
         >
             <motion.h3
                 className="projectcontent__title"
@@ -72,8 +72,8 @@ function ProjectContent({ project, flipped }) {
                 }}
                 animate={controller}
                 transition={{
-                    duration: 1,
-                    delay: 1,
+                    duration: 0.75,
+                    delay: 0.75,
                     ease: [0.6, 0.01, 0.40, 0.95]
                 }}
             >
@@ -90,7 +90,6 @@ function ProjectContent({ project, flipped }) {
                 initial="initial"
                 animate={controller}
                 onAnimationComplete={() => { setShowBorder(true) }}
-                data-border={showBorder}
             >
                 <motion.h4
                     className="projectcontent__description-title"
@@ -105,10 +104,10 @@ function ProjectContent({ project, flipped }) {
                     className="projectcontent__tag-container"
                     variants={contentAnimation}
                 >
-                    {project.tags.map(tag => (
+                    {project.tags.map((tag, index) => (
                         <li
                             className="projectcontent__tag"
-                            key={project.name + project.tag}
+                            key={project.name + index}
                         >{tag}</li>
                     ))}
 
