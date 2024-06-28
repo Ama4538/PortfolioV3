@@ -1,0 +1,117 @@
+/* Skills */
+.skills {
+    padding: var(--padding-small);
+    background-color: var(--accent-color);
+    color: var(--secondary-color);
+    min-height: 200dvh;
+}
+
+.skills__title-container {
+    position: relative;
+    text-align: end;
+}
+
+.skills__title {
+    font-family: var(--primary-font);
+    font-size: var(--font-large);
+    font-weight: 400;
+}
+
+.skills__container {
+    position: sticky;
+    top: 10%;
+    overflow: hidden;
+}
+
+.skills__container-inner {
+    display: flex;
+    padding-top: var(--padding-very-small);
+    list-style: none;
+    gap: var(--padding-very-small);
+}
+
+.skills__skill-box {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: var(--padding-very-small) 0;
+    width: 27.5dvw;
+    aspect-ratio: 1 / 1;
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    font-family: var(--primary-font);
+    font-size: calc(var(--font-large) / 1.45);
+    font-weight: 400;
+    text-align: center;
+    text-shadow: 1px 2px 2px black;
+}
+
+.skills__skill-name {
+    z-index: 1;
+    position: relative;
+    margin-top: auto;
+}
+
+/* Psudeo Element */
+.skills__title-container::before {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 1px;
+    width: 0%;
+    border-bottom: solid 1px var(--secondary-color);
+    content: "";
+    transition: 0.25s ease-out;
+}
+
+.skills__skill-name::before {
+    position: absolute;
+    left: 0;
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+    background-color: var(--primary-color);
+    opacity: 0.10;
+    content: "";
+}
+
+.skills__skill-box::before {
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    height: 50%;
+    width: 50%;
+
+    content: "";
+    translate: -50% -50%;
+}
+
+/* Icons */
+.skills__container-inner li:nth-child(1) .skills__skill-box::before {
+    background: url("./icons/java.svg") no-repeat center / contain;
+}
+
+.skills__container-inner li:nth-child(2) .skills__skill-box::before {
+    background: url("./icons/javascript.svg") no-repeat center / contain;
+}
+
+.skills__container-inner li:nth-child(3) .skills__skill-box::before {
+    background: url("./icons/html.svg") no-repeat center / contain;
+}
+
+.skills__container-inner li:nth-child(4) .skills__skill-box::before {
+    background: url("./icons/css.svg") no-repeat center / contain;
+}
+
+.skills__container-inner li:nth-child(5) .skills__skill-box::before {
+    background: url("./icons/react.svg") no-repeat center / contain;
+}
+
+.skills__container-inner li:nth-child(6) .skills__skill-box::before {
+    background: url("./icons/c.svg") no-repeat center / contain;
+}
+
+/* Animation */
+.skills__title-container[data-border=true]::before {
+    width: 100%;
+}

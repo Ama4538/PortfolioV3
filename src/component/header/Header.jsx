@@ -29,7 +29,8 @@ function Header() {
     }
 
     return (
-        <header className="header">
+        <header className="header"
+            id="header">
             <motion.div
                 className="header__row"
                 variants={headerRowAnimation}

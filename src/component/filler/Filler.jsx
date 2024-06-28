@@ -21,7 +21,7 @@ function Filler() {
     const containerAnimation = {
         animate: {
             transition: {
-                staggerChildren: 0.30,
+                staggerChildren: 0.20,
             }
         },
     }
@@ -64,13 +64,13 @@ function Filler() {
                 className="filler__text-container"
                 ref={ref}
                 variants={containerAnimation}
-                initial = "initial"
-                animate = {controller}
+                initial="initial"
+                animate={controller}
             >
                 <motion.p variants={fillerAnimation}><strong>Growing</strong> Through Failure,</motion.p>
                 <motion.p variants={fillerAnimationAlt}>Discovering <strong>New Ideas</strong>,</motion.p>
                 <motion.p variants={fillerAnimation}>and</motion.p>
-                <motion.p variants={fillerAnimationAlt}>Crafting <strong>Projects</strong> from <strong>Passion</strong></motion.p>
+                <motion.p variants={fillerAnimationAlt}>Turning <strong>Passion</strong> into <strong>Projects</strong> </motion.p>
             </motion.div>
         </section>
     )

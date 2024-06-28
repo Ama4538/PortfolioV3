@@ -1,0 +1,55 @@
+/* About */
+.about {
+    position: relative;
+    padding: var(--padding-small) var(--padding-small) calc(var(--padding-med) * 1.30);
+    width: 97.5%;
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    scroll-margin-top: calc((var(--padding-small) * 2) + calc(var(--font-med)));
+}
+
+.about__title-container {
+    position: relative;
+}
+
+.about__title {
+    font-family: var(--primary-font);
+    font-size: var(--font-large);
+}
+
+.about__text-container {
+    display: flex;
+    flex-direction: column;
+    gap: var(--padding-very-small);
+    padding-top: var(--padding-very-small);
+    font-family: var(--secondary-font);
+    font-size: calc(var(--font-med) * 1.10);
+    font-weight: 400;
+    text-indent: calc(var(--font-med) * 2);
+}
+
+/* Psudeo Element */
+.about::before {
+    position: absolute;
+    top: 40%;
+    right: -2.5%;
+    height: 60%;
+    width: 2.5%;
+    background-color: var(--accent-color);
+    content: "";
+}
+
+.about__title-container::before {
+    position: absolute;
+    bottom: 0;
+    height: 1px;
+    width: 0%;
+    border-bottom: solid 1px var(--primary-color);
+    content: "";
+    transition: 0.25s ease-out;
+}
+
+/* Animation */
+.about__title-container[data-border=true]::before {
+    width: 100%;
+}

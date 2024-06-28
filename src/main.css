@@ -14,6 +14,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
 
 /* CSS */
+@import "./component/app/extra.css";
 @import "./component/app/media.css";
 @import "./component/nav/nav.css";
 @import "./component/header/header.css";
@@ -21,11 +22,14 @@
 @import "./component/projectcontent/projectcontent.css";
 @import "./component/projects/projects.css";
 @import "./component/filler/filler.css";
+@import "./component/about/about.css";
+@import "./component/skills/skill.css";
 
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 :root {
@@ -52,22 +56,6 @@
     --font-very-large: clamp(11rem, max(12.25rem, 14.5vmax), max(13rem, 15.25vmax));
 }
 
-/* Scorll Bar */
-::-webkit-scrollbar {
-    width: 8px;
-}
-
-::-webkit-scrollbar-track {
-    background: transparent;
-}
-
-::-webkit-scrollbar-thumb {
-    background: #606266;
-}
-
-::-webkit-scrollbar-thumb:hover {
-    background: #33353b;
-}
 
 /* main */
 .main {
@@ -76,23 +64,7 @@
     background-color: var(--primary-color);
 }
 
-/* About */
-.about {
-    padding: 0 var(--padding-small);
-    width: 97.5%;
+/* Contact */
+.contact {
     min-height: 100dvh;
-    background-color: var(--secondary-color);
-    color: var(--primary-color);
-}
-
-.about__title {
-    font-family: var(--primary-font);
-    font-size: var(--font-large);
-    border-bottom: solid 1px var(--primary-color);
-}
-
-.about__animation-container {
-    margin-top: var(--padding-very-small);
-    background-color: red;
-    aspect-ratio: 2.75/1;
 }

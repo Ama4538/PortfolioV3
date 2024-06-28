@@ -21,8 +21,8 @@ function Nav() {
             }}
         >
             <a
-                href=""
                 className="nav__title nav__link"
+                href="#header"
             > Kevin </a>
             <ul
                 className="nav__menu-container"
@@ -36,20 +36,20 @@ function Nav() {
                 </li>
                 <li className="nav__menu-item">
                     <a
-                        href=""
                         className="nav__link"
+                        href="#projects"
                     >Projects</a>
                 </li>
                 <li className="nav__menu-item">
                     <a
-                        href=""
                         className="nav__link"
+                        href="#about"
                     >About</a>
                 </li>
                 <li className="nav__menu-item">
                     <a
-                        href=""
                         className="nav__link"
+                        href=""
                     >Contact</a>
                 </li>
             </ul>

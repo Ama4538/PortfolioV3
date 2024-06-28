@@ -6,6 +6,7 @@
     color: var(--secondary-color);
     cursor: default;
     text-transform: uppercase;
+    scroll-margin-top: calc(var(--padding-small) + calc(var(--font-med) * 1.20));
 }
 
 .header__row {

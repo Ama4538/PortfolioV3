@@ -1,7 +1,7 @@
 import { motion, useAnimation, useInView } from "framer-motion";
 import { useEffect, useState, useRef } from 'react';
 
-function ProjectContent({ project, flipped, borderBottom}) {
+function ProjectContent({ project, flipped, borderBottom }) {
     // State used to determine if the animation is complete to show border
     const [showBorder, setShowBorder] = useState(false)
 
@@ -11,7 +11,7 @@ function ProjectContent({ project, flipped, borderBottom}) {
     // Reference to check if in view
     const ref = useRef(null)
     // Used to play animation when in view
-    const inView = useInView(ref, {amount: 0.05})
+    const inView = useInView(ref, { amount: 0.05 })
 
     // play animation when the content is in view
     useEffect(() => {
@@ -24,7 +24,7 @@ function ProjectContent({ project, flipped, borderBottom}) {
     const rightColumnAnimation = {
         animate: {
             transition: {
-                staggerChildren: 0.15,
+                staggerChildren: 0.10,
             }
         },
     }
@@ -49,7 +49,7 @@ function ProjectContent({ project, flipped, borderBottom}) {
             className="projectcontent"
             ref={ref}
             data-flip={flipped}
-            data-borderbottom = {borderBottom}
+            data-borderbottom={borderBottom}
             data-border={showBorder}
         >
             <motion.h3
@@ -73,7 +73,7 @@ function ProjectContent({ project, flipped, borderBottom}) {
                 animate={controller}
                 transition={{
                     duration: 0.75,
-                    delay: 0.75,
+                    delay: 0.50,
                     ease: [0.6, 0.01, 0.40, 0.95]
                 }}
             >
@@ -100,7 +100,7 @@ function ProjectContent({ project, flipped, borderBottom}) {
                     variants={contentAnimation}
                 >{project.description}</motion.p>
 
-                <motion.ul 
+                <motion.ul
                     className="projectcontent__tag-container"
                     variants={contentAnimation}
                 >
@@ -113,24 +113,25 @@ function ProjectContent({ project, flipped, borderBottom}) {
 
                 </motion.ul>
 
-                <ul className="projectcontent__link-container">
+                <motion.ul
+                    className="projectcontent__link-container"
+                    variants={contentAnimation}
+                >
                     <li className="projectcontent__link-item">
-                        <motion.a
+                        <a
                             className="projectcontent__link"
                             href={project.liveLink}
                             target="__blank"
-                            variants={contentAnimation}
-                        > See It Live</motion.a>
+                        > See It Live</a>
                     </li>
                     <li className="projectcontent__link-item">
-                        <motion.a
+                        <a
                             className="projectcontent__link"
                             href={project.liveLink}
                             target="__blank"
-                            variants={contentAnimation}
-                        > View The Code</motion.a>
+                        > View The Code</a>
                     </li>
-                </ul>
+                </motion.ul>
             </motion.div>
 
         </article>

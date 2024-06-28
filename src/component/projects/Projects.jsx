@@ -7,11 +7,12 @@ function Projects() {
     // Reference to check if in view
     const ref = useRef(null)
     // Used to play animation when in view
-    const inView = useInView(ref, {amount: 0.05, once: true })
+    const inView = useInView(ref, { amount: 0.05, once: true })
 
     return (
         <motion.section
             className="projects"
+            id="projects"
             data-inview={inView}
             ref={ref}
             initial={{
@@ -30,15 +31,15 @@ function Projects() {
             <div className="projects__container">
                 {projects.map((project, index) => (
                     // Flip every other product
-                    <ProjectContent 
-                    project={project} 
-                    flipped={(index + 1) % 2 === 0} 
-                    borderBottom = {index < (projects.length - 1)}
-                    key={project.name + "main"}
+                    <ProjectContent
+                        project={project}
+                        flipped={(index + 1) % 2 === 0}
+                        borderBottom={index < (projects.length - 1)}
+                        key={project.name + "main"}
                     />
                 ))}
             </div>
-            
+
         </motion.section>
     )
 }

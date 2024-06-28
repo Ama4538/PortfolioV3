@@ -52,12 +52,12 @@
 }
 
 /* Animation */
-.projects[data-inview=true] .projects__header-title::before{
+.projects[data-inview=true] .projects__header-title::before {
     right: 0;
     width: 50%;
 }
 
-.projects[data-inview=true] .projects__header-title::after{
+.projects[data-inview=true] .projects__header-title::after {
     left: 0;
     width: 51%;
 }
