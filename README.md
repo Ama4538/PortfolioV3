@@ -1,4 +1,4 @@
-![Default Screenshot](image/main.png)
+![Default Screenshot](images/main.png)
 
 # PortfolioV3
 This repository showcases my projects and skills as a web developer
@@ -25,9 +25,9 @@ Accessible from https://portfolio-v3-kevin-lys-projects.vercel.app
 - CSS
 
 ## Screenshots
-![Projects Screenshot](image/project.png)
-![About Screenshot](image/about.png)
-![Contact Screenshot](image/contact.png)
+![Projects Screenshot](images/project.png)
+![About Screenshot](images/about.png)
+![Contact Screenshot](images/contact.png)
 
 
 ## License
