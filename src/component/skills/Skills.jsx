@@ -4,6 +4,7 @@ import { useEffect, useState, useRef } from 'react';
 function Skills() {
     // State used to determine if the animation is complete to show border
     const [showBorder, setShowBorder] = useState(false)
+    const [defaultPercent, setDefaultPercent] = useState("");
 
     // Animation controller
     const controller = useAnimation();
@@ -16,10 +17,10 @@ function Skills() {
         target: ref,
     })
 
-    const x = useTransform(scrollYProgress, [0, 1], ["0", "-85%"])
+    const x = useTransform(scrollYProgress, [0, 1], ["0", `${defaultPercent}`])
 
     // Used to play animation when in view
-    const inView = useInView(ref, {amount: 0.10})
+    const inView = useInView(ref, { amount: 0.10 })
 
     // Text used to generate title
     const title = "Technical Skills";
@@ -34,6 +35,34 @@ function Skills() {
             controller.start("animate")
         }
     }, [inView])
+
+    // Media Query 
+    useEffect(() => {
+        const handleResize = () => {
+            if (window.innerWidth < 576) {
+                setDefaultPercent("-275.5%");
+            } else if (window.innerWidth >= 576 && window.innerWidth <= 767) {
+                setDefaultPercent("-195.5%");
+            } else if (window.innerWidth >= 768 && window.innerWidth <= 991) {
+                setDefaultPercent("-140.5%");
+            } else if (window.innerWidth >= 992 && window.innerWidth <= 1199) {
+                setDefaultPercent("-102.5%");
+            } else {
+                setDefaultPercent("-85%");
+            }
+        };
+
+        // Call the function initially to set the default amount
+        handleResize();
+
+        // Add an event listener for window resize
+        window.addEventListener('resize', handleResize);
+
+        // Clean up the event listener on component unmount
+        return () => {
+            window.removeEventListener('resize', handleResize);
+        };
+    }, [])
 
     // Animation
     const skillsAnimation = {
