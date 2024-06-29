@@ -90,7 +90,7 @@
     height: 100%;
     aspect-ratio: 1 / 1;
     background-color: red;
-    background: url("./icons/triangle.svg") no-repeat center / cover;
+    background: url("/icons/triangle.svg") no-repeat center / cover;
     content: "";
     transition: 0.35s ease-in-out;
     translate: -50% 0;
@@ -113,11 +113,11 @@
 }
 
 .contact-footer__link-container li:nth-child(1) .contact-footer__link::after {
-    background: url("./icons/linkedin.svg") no-repeat center / cover;
+    background: url("/icons/linkedin.svg") no-repeat center / cover;
 }
 
 .contact-footer__link-container li:nth-child(2) .contact-footer__link::after {
-    background: url("./icons/github.svg") no-repeat center / cover;
+    background: url("/icons/github.svg") no-repeat center / cover;
 }
 
 /* Animation */
