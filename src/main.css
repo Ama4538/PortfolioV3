@@ -24,6 +24,7 @@
 @import "./component/filler/filler.css";
 @import "./component/about/about.css";
 @import "./component/skills/skill.css";
+@import "./component/contact/contact.css";
 
 * {
     padding: 0;
