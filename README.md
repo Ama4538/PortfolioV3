@@ -1,3 +1,5 @@
+![Default Screenshot](image/main.png)
+
 # PortfolioV3
 This repository showcases my projects and skills as a web developer
 
@@ -10,7 +12,7 @@ This repository showcases my projects and skills as a web developer
 - [License](#license)
 
 ## Access
-Accessible from 
+Accessible from https://portfolio-v3-kevin-lys-projects.vercel.app 
 
 ## Installation
 1. Clone the repository: git clone https://github.com/Ama4538/PortfolioV3.git
@@ -23,6 +25,10 @@ Accessible from
 - CSS
 
 ## Screenshots
+![Projects Screenshot](image/project.png)
+![About Screenshot](image/about.png)
+![Contact Screenshot](image/contact.png)
+
 
 ## License
 Distributed under the MIT License. See `LICENSE` for more information.
