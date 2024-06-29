@@ -56,15 +56,9 @@
     --font-very-large: clamp(11rem, max(12.25rem, 14.5vmax), max(13rem, 15.25vmax));
 }
 
-
 /* main */
 .main {
     display: flex;
     flex-direction: column;
     background-color: var(--primary-color);
-}
-
-/* Contact */
-.contact {
-    min-height: 100dvh;
 }

@@ -1,0 +1,131 @@
+/* Contact */
+.contact {
+    display: flex;
+    flex-direction: column;
+    padding: var(--padding-large);
+    padding-bottom: 0;
+    min-height: 100dvh;
+    font-family: var(--primary-font);
+    color: var(--secondary-color);
+}
+
+.contact__text-container {
+    font-size: var(--font-large);
+    overflow: hidden;
+}
+
+.contact__button-container {
+    position: relative;
+    margin-left: auto;
+    width: max-content;
+}
+
+.contact__email {
+    position: relative;
+    font-family: var(--primary-font);
+    font-size: calc(var(--font-large) / 2);
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.contact__email-message {
+    position: absolute;
+    top: -60%;
+    z-index: 1;
+    padding: calc(var(--padding-very-small) / 3) var(--padding-very-small);
+    width: max-content;
+    font-family: var(--secondary-font);
+    font-size: var(--font-very-small);
+    font-weight: 500;
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    opacity: 0;
+    translate: -50% 0;
+    transition: opacity 0.35s ease-in-out;
+    user-select: none;
+}
+
+.contact__footer-container {
+    padding: var(--padding-very-small) 0;
+    margin-top: auto;
+    overflow: hidden;
+}
+
+.contact-footer__link-container {
+    padding-left: calc(var(--font-small) * 1.15);
+    display: flex;
+    gap: var(--padding-med);
+    list-style: none;
+}
+
+.contact-footer__link {
+    position: relative;
+    font-family: var(--secondary-font);
+    font-size: var(--font-small);
+    font-weight: 600;
+    color: var(--secondary-color);
+    text-decoration: none;
+}
+
+/* Psuedo Element */
+.contact__email::before,
+.contact-footer__link::before {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    height: 2px;
+    width: 100%;
+    background-color: var(--secondary-color);
+    content: "";
+    transition: 0.35s ease-in-out;
+}
+
+.contact__email-message::before {
+    position: absolute;
+    left: 50%;
+    bottom: -40%;
+    z-index: -1;
+    height: 100%;
+    aspect-ratio: 1 / 1;
+    background-color: red;
+    background: url("./icons/triangle.svg") no-repeat center / cover;
+    content: "";
+    transition: 0.35s ease-in-out;
+    translate: -50% 0;
+}
+
+.contact-footer__link::before {
+    transition: 0.15s ease-in-out;
+}
+
+/* Icons */
+.contact-footer__link::after {
+    position: absolute;
+    top: 50%;
+    left: calc(var(--font-small) * -1.15);
+    height: var(--font-small);
+    aspect-ratio: 1 / 1;
+    content: "";
+    transition: 0.35s ease-in-out;
+    translate: 0 -50%;
+}
+
+.contact-footer__link-container li:nth-child(1) .contact-footer__link::after {
+    background: url("./icons/linkedin.svg") no-repeat center / cover;
+}
+
+.contact-footer__link-container li:nth-child(2) .contact-footer__link::after {
+    background: url("./icons/github.svg") no-repeat center / cover;
+}
+
+/* Animation */
+.contact__email:hover::before,
+.contact-footer__link:hover::before {
+    left: 0;
+    width: 0;
+}
+
+.contact__button-container:hover .contact__email-message {
+    opacity: 1;
+}

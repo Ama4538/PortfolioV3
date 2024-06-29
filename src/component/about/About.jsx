@@ -29,7 +29,6 @@ function About() {
     const aboutAnimation = {
         animate: {
             transition: {
-                delayChildren: 0.50,
                 staggerChildren: 0.05,
             }
         },
@@ -37,13 +36,15 @@ function About() {
 
     const contentAnimation = {
         initial: {
+            y: 20,
             opacity: 0,
         },
         animate: {
+            y: 0,
             opacity: 1,
             transition: {
-                duration: 1,
-                delay: 1.25,
+                duration: 0.75,
+                delay: 1,
                 ease: [0.6, 0.01, 0.40, 0.95]
             }
         },
@@ -56,7 +57,7 @@ function About() {
         animate: {
             opacity: 1,
             transition: {
-                duration: 0.25,
+                duration: 0.15,
                 ease: "easeInOut"
             }
         },

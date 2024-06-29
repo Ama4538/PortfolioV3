@@ -50,6 +50,7 @@
     z-index: 1;
     position: relative;
     margin-top: auto;
+    user-select: none;
 }
 
 /* Psudeo Element */
@@ -81,7 +82,6 @@
     left: 50%;
     height: 50%;
     width: 50%;
-
     content: "";
     translate: -50% -50%;
 }

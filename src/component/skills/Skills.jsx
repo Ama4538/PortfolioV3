@@ -19,7 +19,7 @@ function Skills() {
     const x = useTransform(scrollYProgress, [0, 1], ["0", "-87.5%"])
 
     // Used to play animation when in view
-    const inView = useInView(ref)
+    const inView = useInView(ref, {amount: 0.10})
 
     // Text used to generate title
     const title = "Technical Skills";
@@ -39,7 +39,7 @@ function Skills() {
     const skillsAnimation = {
         animate: {
             transition: {
-                delayChildren: 0.50,
+                delayChildren: 0.25,
                 staggerChildren: 0.25,
             }
         },
@@ -47,12 +47,14 @@ function Skills() {
 
     const contentAnimation = {
         initial: {
+            y: 20,
             opacity: 0,
         },
         animate: {
+            y: 0,
             opacity: 1,
             transition: {
-                duration: 0.75,
+                duration: 0.60,
                 ease: [0.6, 0.01, 0.40, 0.95]
             }
         },

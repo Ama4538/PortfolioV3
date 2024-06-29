@@ -3,7 +3,7 @@
             "name": "Petal Vogue",
             "description": "A fast fashion e-commerce platform where each product has a unique page with specific coloring and sizing. Key features include a sorting system, search functionality, wishlist management, and a user-friendly cart system. Product details can be edited directly from the wishlist or cart. The platform also features a recommendation system that suggests products based on user preferences. It is fully responsive and maintains data between refreshes using local storage.",
             "category" : "Commerce",
-            "tags": ["React", "CSS"],
+            "tags": ["React", "CSS", "Framer Motion", "React-Router-DOM"],
             "image": "petal-vogue.png",
             "liveLink" : "https://petal-vogue.vercel.app",
             "codeLink" :  "https://github.com/Ama4538/Petal-Vogue"

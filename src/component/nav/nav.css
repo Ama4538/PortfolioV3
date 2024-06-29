@@ -17,7 +17,6 @@
     list-style: none;
 }
 
-
 .nav__menu-item {
     display: flex;
     align-items: center;
@@ -67,8 +66,8 @@
 
 /* Animation */
 .nav__link:hover:before {
-    width: 100%;
     left: 0;
+    width: 100%;
 }
 
 .nav__link:hover {

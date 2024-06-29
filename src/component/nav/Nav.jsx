@@ -49,7 +49,7 @@ function Nav() {
                 <li className="nav__menu-item">
                     <a
                         className="nav__link"
-                        href=""
+                        href="#contact"
                     >Contact</a>
                 </li>
             </ul>
