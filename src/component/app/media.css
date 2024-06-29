@@ -1,20 +1,5 @@
 /* Media */
 
-/* Large Device */
-@media (min-width: 1320px) and (max-width: 1440px) {
-
-    /* header */
-    .header-row__title {
-        font-size: calc(var(--font-very-large) * 1.10);
-        font-weight: 500;
-    }
-
-    /* Marquee */
-    .marquee__content {
-        font-size: var(--font-very-large);
-    }
-}
-
 /* Laptops */
 @media (min-width: 992px) and (max-width: 1199px) {
 

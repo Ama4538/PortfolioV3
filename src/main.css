@@ -15,7 +15,6 @@
 
 /* CSS */
 @import "./component/app/extra.css";
-@import "./component/app/media.css";
 @import "./component/nav/nav.css";
 @import "./component/header/header.css";
 @import "./component/marquee/marquee.css";
@@ -25,6 +24,7 @@
 @import "./component/about/about.css";
 @import "./component/skills/skill.css";
 @import "./component/contact/contact.css";
+@import "./component/app/media.css";
 
 * {
     padding: 0;
