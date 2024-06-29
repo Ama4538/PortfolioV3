@@ -10,7 +10,8 @@
 }
 
 .contact__text-container {
-    font-size: var(--font-large);
+    font-size: calc(var(--font-very-large) / 1.875);
+    cursor: default;
     overflow: hidden;
 }
 

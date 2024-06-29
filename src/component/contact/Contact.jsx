@@ -57,7 +57,7 @@ function Contact() {
     const containerAnimation = {
         animate: {
             transition: {
-                staggerChildren: 0.125,
+                staggerChildren: 0.20,
             }
         }
     }
@@ -69,7 +69,7 @@ function Contact() {
         animate: {
             y: 0,
             transition: {
-                duration: 1,
+                duration: 1.0,
                 ease: [0.6, 0.01, -0.05, 0.95]
             }
         }

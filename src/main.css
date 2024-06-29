@@ -45,15 +45,15 @@
 
     /* padding */
     --padding-very-small: clamp(0.5rem, max(1rem, 2vmax), max(2rem, 3vmax));
-    --padding-small: clamp(1rem, max(2rem, 3vmax), max(4rem, 5vmax));
+    --padding-small: clamp(1rem, max(2rem, 2.5vmax), max(4rem, 5vmax));
     --padding-med: clamp(2rem, max(3rem, 4.5vmax), max(5rem, 6vmax));
     --padding-large: clamp(4rem, max(6rem, 7.5vmax), max(8rem, 9.5vmax));
 
     /* Font Size */
-    --font-very-small: clamp(0.5rem, max(1rem, 1.25vmax), max(2rem, 2.25vmax));
-    --font-small: clamp(1rem, max(1.25rem, 1.25vmax), max(2.25rem, 2.25vmax));
-    --font-med: clamp(1.25rem, max(1.5rem, 1.75vmax), max(2.5rem, 2.75vmax));
-    --font-large: clamp(5rem, max(6rem, 7vmax), max(7rem, 8vmax));
+    --font-very-small: clamp(0.5rem, max(1rem, 1.10vmax), max(2rem, 2.25vmax));
+    --font-small: clamp(1rem, max(1.25rem, 1.30vmax), max(2.25rem, 2.25vmax));
+    --font-med: clamp(1.25rem, max(1.5rem, 1.8vmax), max(2.5rem, 2.75vmax));
+    --font-large: clamp(5rem, max(6rem, 6.5vmax), max(7rem, 8vmax));
     --font-very-large: clamp(11rem, max(12.25rem, 14.5vmax), max(13rem, 15.25vmax));
 }
 
@@ -62,4 +62,129 @@
     display: flex;
     flex-direction: column;
     background-color: var(--primary-color);
+}
+
+/* Media */
+@media (min-width: 1320px) and (max-width: 1440px) {
+    /* header */
+    .header-row__title {
+        font-size: calc(var(--font-very-large) * 1.10);
+        font-weight: 500;
+    }
+
+    /* Marquee */
+    .marquee__content {
+        font-size: var(--font-very-large);
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    /* Nav */
+    .nav {
+        padding: var(--padding-small) calc(var(--padding-large) / 1.5) 0;
+    }
+
+    .nav__title,
+    .nav__link {
+        font-size: calc(var(--font-small) * 1.25);
+    }
+
+    .nav__title {
+        font-size: calc(var(--font-med) * 1.20);
+    }
+
+    /* Header */
+    .header__row {
+        flex-direction: column;
+    }
+
+    .header__title-container {
+        display: flex;
+        justify-content: center;
+    }
+
+    .header-row__title {
+        font-size: calc(var(--font-very-large) * 1.075);
+        font-weight: 500;
+    }
+
+    .header-row__message {
+        padding: var(--padding-small) var(--padding-small) calc(var(--padding-large) * 1.25);
+        font-size: calc(var(--font-large) / 3);
+    }
+
+    .message-large {
+        display: none;
+    }
+
+    .message-mobile {
+        display: flex;
+    }
+
+    /* Marquee */
+    .marquee__content {
+        font-size: calc(var(--font-very-large) / 1.10);
+    }
+
+    /* Projects */
+    .projects {
+        padding: 0  calc(var(--padding-large) / 1.5) calc((var(--padding-very-small) * 3) + var(--font-med));
+        margin-top: calc((var(--padding-very-small) * -3) - var(--font-med));
+    }
+
+    .projects__header-title {
+        font-size: calc(var(--font-med) * 1.20);
+    }
+
+    /* Filler */
+    .filler {
+        padding: calc(var(--padding-large) / 1.5);
+    }
+
+    /* Skills */ 
+    .skills__container {
+        position: sticky;
+        top: 17.5%;
+        overflow: hidden;
+    }
+
+    .skills__skill-box {
+        font-size: calc(var(--font-large) / 2);
+    }
+
+    /* Contacts */
+    .contact {
+        padding: calc(var(--padding-large) / 1.5);
+        padding-bottom: 0;
+    }
+    
+    .contact__text-container {
+        font-size: calc(var(--font-very-large) / 1.70);
+        cursor: default;
+        overflow: hidden;
+    }
+
+    .contact__email {
+        margin-top: var(--padding-very-small);
+        font-size: calc(var(--font-large) / 1.5);
+    }
+
+    .contact-footer__link-container {
+        padding-left: calc((var(--font-small) * 1.25) * 1.15);
+    }
+
+    .contact-footer__link {
+        font-size: calc(var(--font-small) * 1.25);
+    }
+    
+    .contact-footer__link::after {
+        position: absolute;
+        top: 50%;
+        left: calc(var(--font-small) * -1.40);
+        height: calc(var(--font-small) * 1.25);
+        aspect-ratio: 1 / 1;
+        content: "";
+        transition: 0.35s ease-in-out;
+        translate: 0 -50%;
+    }
 }

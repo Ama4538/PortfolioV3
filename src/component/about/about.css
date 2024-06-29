@@ -23,7 +23,7 @@
     gap: var(--padding-very-small);
     padding-top: var(--padding-very-small);
     font-family: var(--secondary-font);
-    font-size: calc(var(--font-med) * 1.10);
+    font-size: calc(var(--font-large) / 3.75);
     font-weight: 400;
     text-indent: calc(var(--font-med) * 2);
 }

@@ -17,11 +17,11 @@
 }
 
 .projectcontent__title {
-    margin-top: calc(var(--padding-very-small) * -1);
     padding: 0 0 calc(var(--padding-very-small) / 2);
     margin-right: calc(var(--padding-very-small) / 1.5);
     font-size: var(--font-large);
     font-weight: 400;
+    cursor: default;
     text-align: center;
 }
 
@@ -72,9 +72,11 @@
     margin-bottom: calc(var(--padding-very-small) / 5);
     margin-top: calc(var(--padding-very-small) / -2);
     font-size: calc(var(--font-med) * 1.8);
+    cursor: default;
 }
 
 .projectcontent__description {
+    padding-bottom: var(--padding-very-small);
     font-family: var(--secondary-font);
     font-size: var(--font-very-small);
     font-weight: 500;
@@ -86,7 +88,6 @@
     display: flex;
     flex-wrap: wrap;
     gap: calc(var(--padding-very-small) / 3);
-    ;
     margin-top: auto;
     list-style: none;
 }

@@ -37,6 +37,7 @@ function Header() {
                 initial="initial"
                 animate="animate"
             >
+                <div className="header__title-container">
                 {titleArray.map(letter => {
                     return (
                         <motion.span
@@ -47,8 +48,9 @@ function Header() {
                         >{letter}</motion.span>
                     )
                 })}
+                </div>
                 <motion.p
-                    className="header-row__message"
+                    className="header-row__message message-large"
                     initial={{
                         opacity: 0
                     }}
@@ -66,6 +68,23 @@ function Header() {
                 </motion.p>
             </motion.div>
             <Marquee text={"Driven by Curiosity and Innovation, Transforming Ideas into Reality."} />
+            <motion.p
+                    className="header-row__message message-mobile"
+                    initial={{
+                        opacity: 0
+                    }}
+                    animate={{
+                        opacity: 1
+                    }}
+                    transition={{
+                        duration: 1,
+                        delay: 1.55,
+                        ease: "easeInOut"
+                    }}
+                >
+                    <em>"Sucking at something is the first step towards being sorta good at something."</em>
+                    - Jake the Dog
+                </motion.p>
         </header>
     )
 }

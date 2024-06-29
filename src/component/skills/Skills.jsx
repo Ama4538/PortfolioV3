@@ -16,7 +16,7 @@ function Skills() {
         target: ref,
     })
 
-    const x = useTransform(scrollYProgress, [0, 1], ["0", "-87.5%"])
+    const x = useTransform(scrollYProgress, [0, 1], ["0", "-85%"])
 
     // Used to play animation when in view
     const inView = useInView(ref, {amount: 0.10})
