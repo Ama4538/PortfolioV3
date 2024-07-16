@@ -127,7 +127,7 @@ function ProjectContent({ project, flipped, borderBottom }) {
                     <li className="projectcontent__link-item">
                         <a
                             className="projectcontent__link"
-                            href={project.liveLink}
+                            href={project.codeLink}
                             target="__blank"
                         > View The Code</a>
                     </li>
