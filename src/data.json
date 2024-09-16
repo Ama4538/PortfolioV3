@@ -9,6 +9,15 @@
             "codeLink" :  "https://github.com/Ama4538/Petal-Vogue"
         },
         {
+            "name": "Quadsaic",
+            "description": "A game hub featuring two popular games: Wordle and Word Search. Each game is enhanced with unique customizations to provide a fresh and engaging experience while retaining the charm of the originals.",
+            "category" : "Game",
+            "tags": ["React", "CSS", "Framer Motion", "React-Router-DOM"],
+            "image": "quadsaic.png",
+            "liveLink" : "https://quadsaic.vercel.app",
+            "codeLink" :  "https://github.com/Ama4538/Quadsaic"
+        },
+        {
             "name": "Weather App",
             "description": "A weather app providing a 24-hour and 3-day forecast using a free weather API. Key features include current weather conditions, zipcode search functionality, and real-time updates. The app offers a user-friendly interface with detailed weather information, ensuring users stay informed about upcoming weather changes.",
             "category" : "Weather",
@@ -34,14 +43,5 @@
             "image": "etch-a-sketch.png",
             "liveLink" : "https://ama4538.github.io/Etch-A-Sketch/",
             "codeLink" :  "https://github.com/Ama4538/Etch-A-Sketch"
-        },
-        {
-            "name": "Image slider",
-            "description": "A simple image slider for displaying a series of images with animation and transition effects. Key features include image shifting following the cursor, hover effects, and smooth transitions.",
-            "category" : "Presentation",
-            "tags": ["HTML", "CSS", "JavaScript"],
-            "image": "image-slider.png",
-            "liveLink" : "https://ama4538.github.io/Image-Slider/",
-            "codeLink" :  "https://github.com/Ama4538/Image-Slider"
         }
 ]
