@@ -106,7 +106,8 @@ function About() {
                     initial="initial"
                     animate={controller}
                 >
-                    I'm a Computer Science student at George Mason University. I love taking big problems, breaking them down into smaller pieces, and solving them one by one. I've completed courses in data structures, object-oriented programming, and low-level programming, giving me a solid foundation in software development.  In my free time, I enjoy playing video games, working out, and exploring different programming frameworks. I have also worked as a Barista and a Retail Cashier, experiences that have taught me the value of hard work, customer service, and multitasking.
+                    I'm a Computer Science student at George Mason University with a passion for solving complex problems by breaking them into manageable, logical steps. My coursework in data Structures, object-oriented programming, software engineering, and computer systems and programming has equipped me with a strong foundation in software development and problem-solving.
+                    In my free time, I enjoy playing video games, working out, and diving into new programming concepts. My experiences as a Barista and Retail Cashier have helped me develop strong communication, multitasking, and customer service skills, which I bring into collaborative and team-oriented environments.
                 </motion.p>
             </div>
         </motion.section>

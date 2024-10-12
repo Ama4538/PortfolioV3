@@ -88,27 +88,39 @@
 
 /* Icons */
 .skills__container-inner li:nth-child(1) .skills__skill-box::before {
-    background: url("/icons/java.svg") no-repeat center / contain;
-}
-
-.skills__container-inner li:nth-child(2) .skills__skill-box::before {
     background: url("/icons/javascript.svg") no-repeat center / contain;
 }
 
-.skills__container-inner li:nth-child(3) .skills__skill-box::before {
-    background: url("/icons/html.svg") no-repeat center / contain;
-}
-
-.skills__container-inner li:nth-child(4) .skills__skill-box::before {
-    background: url("/icons/css.svg") no-repeat center / contain;
-}
-
-.skills__container-inner li:nth-child(5) .skills__skill-box::before {
+.skills__container-inner li:nth-child(2) .skills__skill-box::before {
     background: url("/icons/react.svg") no-repeat center / contain;
 }
 
+.skills__container-inner li:nth-child(3) .skills__skill-box::before {
+    background: url("/icons/node.svg") no-repeat center / contain;
+}
+
+.skills__container-inner li:nth-child(4) .skills__skill-box::before {
+    background: url("/icons/express.svg") no-repeat center / contain;
+}
+
+.skills__container-inner li:nth-child(5) .skills__skill-box::before {
+    background: url("/icons/sql.svg") no-repeat center / contain;
+}
+
 .skills__container-inner li:nth-child(6) .skills__skill-box::before {
+    background: url("/icons/java.svg") no-repeat center / contain;
+}
+
+.skills__container-inner li:nth-child(7) .skills__skill-box::before {
     background: url("/icons/c.svg") no-repeat center / contain;
+}
+
+.skills__container-inner li:nth-child(8) .skills__skill-box::before {
+    background: url("/icons/html.svg") no-repeat center / contain;
+}
+
+.skills__container-inner li:nth-child(9) .skills__skill-box::before {
+    background: url("/icons/css.svg") no-repeat center / contain;
 }
 
 /* Animation */

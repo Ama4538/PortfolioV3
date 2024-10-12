@@ -3,7 +3,7 @@
             "name": "Petal Vogue",
             "description": "A fast fashion e-commerce platform where each product has a unique page with specific coloring and sizing. Key features include a sorting system, search functionality, wishlist management, and a user-friendly cart system. Product details can be edited directly from the wishlist or cart. The platform also features a recommendation system that suggests products based on user preferences. It is fully responsive and maintains data between refreshes using local storage.",
             "category" : "Commerce",
-            "tags": ["React", "CSS", "Framer Motion", "React-Router-DOM"],
+            "tags": ["React.js", "CSS", "Framer Motion", "React-Router-DOM"],
             "image": "petal-vogue.png",
             "liveLink" : "https://petal-vogue.vercel.app",
             "codeLink" :  "https://github.com/Ama4538/Petal-Vogue"
@@ -12,7 +12,7 @@
             "name": "Quadsaic",
             "description": "A game hub featuring two popular games: Wordle and Word Search. Each game is enhanced with unique customizations to provide a fresh and engaging experience while retaining the charm of the originals.",
             "category" : "Game",
-            "tags": ["React", "CSS", "Framer Motion", "React-Router-DOM"],
+            "tags": ["React.js", "CSS", "Framer Motion", "React-Router-DOM"],
             "image": "quadsaic.png",
             "liveLink" : "https://quadsaic.vercel.app",
             "codeLink" :  "https://github.com/Ama4538/Quadsaic"
@@ -27,6 +27,14 @@
             "codeLink" :  "https://github.com/Ama4538/Weather-App"
         },
         {
+            "name": "Message Board",
+            "description": "A simple message board application built with Node.js, Express, and EJS. Key features include able to add new messages and view each messages in a separate page.",
+            "category" : "Backend",
+            "tags": ["Express.js", "Node.js", "EJS"],
+            "image": "Simple-Message-Board.png",
+            "codeLink" :  "https://github.com/Ama4538/Simple_Message_Board"
+        },
+        {
             "name": "Calculator",
             "description": "A simple calculator for performing mathematical calculations. Key features include clear functionality, changing negative to positive, percentage calculations, and basic arithmetic operations.",
             "category" : "Utility",
@@ -34,14 +42,5 @@
             "image": "calculator.png",
             "liveLink" : "https://ama4538.github.io/Calculator",
             "codeLink" :  "https://github.com/Ama4538/Calculator"
-        },
-        {
-            "name": "Etch A Sketch",
-            "description": "A virtual Etch A Sketch simulating the classic experience on a web page. Key features include changing grid size, drawing, erasing, and clearing the screen.",
-            "category" : "Game",
-            "tags": ["HTML", "CSS", "JavaScript"],
-            "image": "etch-a-sketch.png",
-            "liveLink" : "https://ama4538.github.io/Etch-A-Sketch/",
-            "codeLink" :  "https://github.com/Ama4538/Etch-A-Sketch"
         }
 ]
