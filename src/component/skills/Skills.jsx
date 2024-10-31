@@ -27,7 +27,7 @@ function Skills() {
     const titleArray = title.split("");
 
     // Array for each skills
-    const skillsArray = ["Javascript", "React", "Node", "Express", "SQL", "Java", "C", "HTML", "CSS", ]
+    const skillsArray = ["Javascript", "Typescript", "React", "Tailwind", "Node", "Express", "SQL", "Java", "C", "HTML", "CSS"]
 
     // play animation when the content is in view
     useEffect(() => {
@@ -36,19 +36,18 @@ function Skills() {
         }
     }, [inView])
 
-    // Media Query (-94)
     useEffect(() => {
         const handleResize = () => {
             if (window.innerWidth < 576) {
-                setDefaultPercent("-369.5%");
+                setDefaultPercent("-615%");
             } else if (window.innerWidth >= 576 && window.innerWidth <= 767) {
-                setDefaultPercent("-289.5%");
+                setDefaultPercent("-565%");
             } else if (window.innerWidth >= 768 && window.innerWidth <= 991) {
-                setDefaultPercent("-234.5%");
+                setDefaultPercent("-350%");
             } else if (window.innerWidth >= 992 && window.innerWidth <= 1199) {
-                setDefaultPercent("-196.5%");
+                setDefaultPercent("-275%");
             } else {
-                setDefaultPercent("-179%");
+                setDefaultPercent("-242%");
             }
         };
 

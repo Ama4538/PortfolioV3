@@ -1,46 +1,81 @@
 [
-        {
-            "name": "Petal Vogue",
-            "description": "A fast fashion e-commerce platform where each product has a unique page with specific coloring and sizing. Key features include a sorting system, search functionality, wishlist management, and a user-friendly cart system. Product details can be edited directly from the wishlist or cart. The platform also features a recommendation system that suggests products based on user preferences. It is fully responsive and maintains data between refreshes using local storage.",
-            "category" : "Commerce",
-            "tags": ["React.js", "CSS", "Framer Motion", "React-Router-DOM"],
-            "image": "petal-vogue.png",
-            "liveLink" : "https://petal-vogue.vercel.app",
-            "codeLink" :  "https://github.com/Ama4538/Petal-Vogue"
-        },
-        {
-            "name": "Quadsaic",
-            "description": "A game hub featuring two popular games: Wordle and Word Search. Each game is enhanced with unique customizations to provide a fresh and engaging experience while retaining the charm of the originals.",
-            "category" : "Game",
-            "tags": ["React.js", "CSS", "Framer Motion", "React-Router-DOM"],
-            "image": "quadsaic.png",
-            "liveLink" : "https://quadsaic.vercel.app",
-            "codeLink" :  "https://github.com/Ama4538/Quadsaic"
-        },
-        {
-            "name": "Weather App",
-            "description": "A weather app providing a 24-hour and 3-day forecast using a free weather API. Key features include current weather conditions, zipcode search functionality, and real-time updates. The app offers a user-friendly interface with detailed weather information, ensuring users stay informed about upcoming weather changes.",
-            "category" : "Weather",
-            "tags": ["HTML", "CSS", "JavaScript"],
-            "image": "weather-app.png",
-            "liveLink" : "https://ama4538.github.io/Weather-App/",
-            "codeLink" :  "https://github.com/Ama4538/Weather-App"
-        },
-        {
-            "name": "Message Board",
-            "description": "A simple message board application built with Node.js, Express, and EJS. Key features include able to add new messages and view each messages in a separate page.",
-            "category" : "Backend",
-            "tags": ["Express.js", "Node.js", "EJS"],
-            "image": "Simple-Message-Board.png",
-            "codeLink" :  "https://github.com/Ama4538/Simple_Message_Board"
-        },
-        {
-            "name": "Calculator",
-            "description": "A simple calculator for performing mathematical calculations. Key features include clear functionality, changing negative to positive, percentage calculations, and basic arithmetic operations.",
-            "category" : "Utility",
-            "tags": ["HTML", "CSS", "JavaScript"],
-            "image": "calculator.png",
-            "liveLink" : "https://ama4538.github.io/Calculator",
-            "codeLink" :  "https://github.com/Ama4538/Calculator"
-        }
+    {
+        "name": "MicroFP",
+        "description": "MicroFP is a C-based software floating-point library built for embedded systems that lack native floating-point hardware. This project focuses on creating a custom 9-bit floating-point representation and implementing six core functions within src/microfp.c for the MUAN programming language. Key features include bitwise manipulation, handling of negative values, special numbers (infinity and NaN), and arithmetic operations like addition, subtraction, multiplication, and negation. The library avoids using float or double types.",
+        "category": "Systems",
+        "tags": [
+            "C",
+            "Embedded Systems",
+            "Bitwise Operations",
+            "Custom Library"
+        ],
+        "image": "microfp.png",
+        "codeLink": "Contact me for access"
+    },
+    {
+        "name": "Egul Scheduler",
+        "description": "Egul CPU Scheduler is a class project focused on enhancing the StrawHat Task Manager, a Linux-based task management shell. My primary contribution was developing the egul_sched.c file, which involves implementing 11 essential functions for custom process scheduling. This includes creating, inserting, removing, and selecting processes from linked lists for Ready, Suspended, and Terminated queues. The project also utilizes bitwise operations to manage process states and criticality flags. This project reinforced practical skills in C programming, linked list management, memory allocation, and systems programming concepts like bit masking and pointer handling.",
+        "category": "Systems",
+        "tags": [
+            "C",
+            "Systems Programming",
+            "Linked Lists",
+            "Bitwise Operations"
+        ],
+        "image": "egul-scheduler.png",
+        "codeLink": "Contact me for access"
+    },
+    {
+        "name": "Petal Vogue",
+        "description": "A fast fashion e-commerce platform where each product has a unique page with specific coloring and sizing. Key features include a sorting system, search functionality, wishlist management, and a user-friendly cart system. Product details can be edited directly from the wishlist or cart. The platform also features a recommendation system that suggests products based on user preferences. It is fully responsive and maintains data between refreshes using local storage.",
+        "category": "Commerce",
+        "tags": [
+            "React.js",
+            "CSS",
+            "Framer Motion",
+            "React-Router-DOM"
+        ],
+        "image": "petal-vogue.png",
+        "liveLink": "https://petal-vogue.vercel.app",
+        "codeLink": "https://github.com/Ama4538/Petal-Vogue"
+    },
+    {
+        "name": "Quadsaic",
+        "description": "A game hub featuring two popular games: Wordle and Word Search. Each game is enhanced with unique customizations to provide a fresh and engaging experience while retaining the charm of the originals.",
+        "category": "Game",
+        "tags": [
+            "React.js",
+            "CSS",
+            "Framer Motion",
+            "React-Router-DOM"
+        ],
+        "image": "quadsaic.png",
+        "liveLink": "https://quadsaic.vercel.app",
+        "codeLink": "https://github.com/Ama4538/Quadsaic"
+    },
+    {
+        "name": "Message Board",
+        "description": "A simple message board application built with Node.js, Express, and EJS. Key features include able to add new messages and view each messages in a separate page.",
+        "category": "Backend",
+        "tags": [
+            "Express.js",
+            "Node.js",
+            "EJS"
+        ],
+        "image": "Simple-Message-Board.png",
+        "codeLink": "https://github.com/Ama4538/Simple_Message_Board"
+    },
+    {
+        "name": "Weather App",
+        "description": "A weather app providing a 24-hour and 3-day forecast using a free weather API. Key features include current weather conditions, zipcode search functionality, and real-time updates. The app offers a user-friendly interface with detailed weather information, ensuring users stay informed about upcoming weather changes.",
+        "category": "Weather",
+        "tags": [
+            "HTML",
+            "CSS",
+            "JavaScript"
+        ],
+        "image": "weather-app.png",
+        "liveLink": "https://ama4538.github.io/Weather-App/",
+        "codeLink": "https://github.com/Ama4538/Weather-App"
+    }
 ]

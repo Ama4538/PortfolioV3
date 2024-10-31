@@ -135,6 +135,11 @@
     user-select: none;
 }
 
+.projectcontent__link-none {
+    cursor: not-allowed;
+}
+
+
 /* Pseudo element */
 .projectcontent__image-container::before {
     position: absolute;
@@ -207,9 +212,18 @@
     transition: 0.275s ease-out;
 }
 
+.projectcontent__link-none::before {
+    display: none;
+}
+
+
 /* Animation */
 .projectcontent__link:hover {
     color: var(--primary-color);
+}
+
+.projectcontent__link-none:hover {
+    color: var(--secondary-color);
 }
 
 .projectcontent__link:hover::before {

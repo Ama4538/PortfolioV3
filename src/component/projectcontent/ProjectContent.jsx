@@ -117,20 +117,32 @@ function ProjectContent({ project, flipped, borderBottom }) {
                     className="projectcontent__link-container"
                     variants={contentAnimation}
                 >
-                    <li className="projectcontent__link-item">
-                        <a
-                            className="projectcontent__link"
-                            href={project.liveLink}
-                            target="__blank"
-                        > See It Live</a>
-                    </li>
-                    <li className="projectcontent__link-item">
-                        <a
-                            className="projectcontent__link"
-                            href={project.codeLink}
-                            target="__blank"
-                        > View The Code</a>
-                    </li>
+                    {project.liveLink
+                        ? <li className="projectcontent__link-item">
+                            <a
+                                className="projectcontent__link"
+                                href={project.liveLink}
+                                target="__blank"
+                            > See It Live</a>
+                        </li>
+                        : <></>
+                    }
+
+                    {project.codeLink != 'Contact me for access'
+                        ? <li className="projectcontent__link-item">
+                            <a
+                                className="projectcontent__link"
+                                href={project.codeLink}
+                                target="__blank"
+                            > View The Code</a>
+                        </li>
+                        : <li className="projectcontent__link-item">
+                            <a
+                                className="projectcontent__link projectcontent__link-none"
+                            > {project.codeLink}</a>
+                        </li>
+                    }
+
                 </motion.ul>
             </motion.div>
 
